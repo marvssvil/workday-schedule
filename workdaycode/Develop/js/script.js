@@ -1,6 +1,6 @@
 //current date 
 $("#currentDay").text(moment().format('dddd'+", "+ 'MMMM Do'));
-
+var saveBtn = $(".saveBtn");
 //past present future
 function timeBlockColor() {
     var hour = moment().hours();
@@ -20,7 +20,7 @@ function timeBlockColor() {
 timeBlockColor();
 
 //when .click button
-var saveBtn = $(".saveBtn");
+
 saveBtn.on("click", function() {
     var time = $(this).siblings(".hour").text();
     var plan = $(this).siblings(".ppf").val();
